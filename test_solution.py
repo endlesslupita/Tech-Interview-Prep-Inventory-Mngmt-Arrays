@@ -47,4 +47,13 @@ def test_edge_case_3_opt():
         assert zero_duplicate_optimized([1, 2, 3, 4, 5, 6]) == [1, 2, 3, 4, 5, 6]
 
 def test_edge_case_4_opt():
+# all zeros
         assert zero_duplicate_optimized([0, 0, 0, 0, 0]) == [0, 0, 0, 0, 0]
+
+def test_edge_case_5_opt():
+# zero at beginning
+        assert zero_duplicate_optimized([0, 1]) == [0, 0]
+
+def test_edge_case_6_opt():
+# single element zero
+        assert zero_duplicate_optimized([0]) == [0]
