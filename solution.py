@@ -26,8 +26,7 @@ def zero_duplicate_optimized(inventory):
     list_length = len(inventory)
     while sum < list_length:
         if inventory[left] == 0:
-            overflow = sum += 2
-            if (overflow) > list_length:
+            if sum + 2 > list_length:
                 flag = 1
                 sum += 1
             else:
@@ -50,7 +49,6 @@ def zero_duplicate_optimized(inventory):
         if inventory[left] == 0 and flag == 0:
             inventory[right] = 0
             right -= 1
-            left -= 1
             inventory[right] = 0
         else:
             inventory[right] = inventory[left]
