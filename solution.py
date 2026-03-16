@@ -16,10 +16,14 @@ def zero_duplicate(inventory):
             check += 1
     return inventory
 
-if __name__ == '__main__':
-    print(zero_duplicate([4,0,1,3,0,2,5,0]))
 
 def zero_duplicate_optimized(inventory):
+    '''
+    Duplicates zeros and shifts remaining elements to the right. Truncates list at the original length.
+
+    Time: O(n) - improved
+    Space: O(1)
+    '''
     count = 0
     left = 0
     flag = 0
@@ -54,3 +58,8 @@ def zero_duplicate_optimized(inventory):
             left -= 1
 
     return inventory
+
+if __name__ == '__main__':
+    inventory = [4,0,1,3,0,2,5,0]
+    print(zero_duplicate(inventory))
+    print(zero_duplicate_optimized(inventory))
