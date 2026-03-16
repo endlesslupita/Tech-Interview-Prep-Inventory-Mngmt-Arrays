@@ -60,6 +60,5 @@ def zero_duplicate_optimized(inventory):
     return inventory
 
 if __name__ == '__main__':
-    inventory = [4,0,1,3,0,2,5,0]
-    print(zero_duplicate(inventory))
-    print(zero_duplicate_optimized(inventory))
+    print(zero_duplicate([4,0,1,3,0,2,5,0]))
+    print(zero_duplicate_optimized([4,0,1,3,0,2,5,0]))
