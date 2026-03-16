@@ -21,26 +21,37 @@ if __name__ == '__main__':
 
 def zero_duplicate_optimized(inventory):
     sum = 0
-    position = 0
+    left = 0
+    flag = 0
     list_length = len(inventory)
     while sum < list_length
-        if inventory[position] == 0 and sum += 2 <= list_length:
-            sum += 2
+        if inventory[left] == 0:    
+            if sum += 2 > list_length:
+                flag = 1
+                sum += 1
+            else:
+                sum += 2
         else:
             sum += 1
-
-        position += 1
-    #when sum == list_length
-    if sum != 0:
-        right = sum - 1
-    else:
-        right = 0
-    if list_length != 0:
-        left = list_length - 1
-    else:
-        left = 0 #break here?
+        left += 1
     
-    while 
-    inventory[list_length - ] = inventory[-zero_count]
-        inventory[right] = inventory[left]
-    zero_count += 1
+    #when sum == list_length
+    if list_length != 0:
+        right = list_length - 1
+    else:
+        right = 0 #break here?
+    
+
+    while left >= 0:
+        if inventory[left] == 0 and flag == 0:
+            inventory[right] = 0
+            right -= 1
+            left -= 1
+            inventory[right] = 0
+        else:
+            inventory[right] = inventory[left]
+            flag = 0
+        right -= 1
+        left -= 1
+
+    
